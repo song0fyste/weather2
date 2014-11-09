@@ -1,0 +1,132 @@
+
+
+h1 {
+	margin: 0;
+}
+
+dl {
+	margin: 0;
+}
+
+p {
+	margin: 0;
+}
+
+dt {
+	margin: 0;
+}
+
+dd {
+	margin: 0;
+}
+
+#MainRain {
+	width: 785px;
+	height: 550px;
+	seamless ;
+	scrolling: no;
+	/*border: solid 1px;*/
+	float: left;
+}
+
+
+#date {
+	border: solid 1px;
+	/*background-color: red;*/
+	width: 250px;
+	height: 48px;
+	float: left;
+	font-size: 48px;
+}
+
+
+#time {
+	border: solid 1px;
+	/*background-color: red;*/
+	width: 130px;
+	/*height: 50px;*/
+	font-size: 48px;
+	float: left;
+	margin-left: 20px;
+}
+
+#today {
+/*	background-color: yellow;*/
+	width: 420px;
+	float: left;
+}
+
+
+#todayIcon {
+	border: solid 1px;
+	width: 400px;
+	height: 240px;
+	float: left;
+}
+
+
+.title {
+	border: solid 1px;
+	width: 200px;
+	float: left;
+	font-size: 24px;
+	height: 24px;
+}
+
+.weather {
+	border: solid 1px;
+	width: 200px;
+	float: left;
+	font-size: 24px;
+	height: 24px;
+}
+
+.subtitle {
+	border: solid 1px;
+	width: 100px;
+}
+
+.cent {
+	border: solid 1px;
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+
+.max {
+	border: solid 1px;
+	width: 50px;
+}
+
+.min {
+	border: solid 1px;
+	width: 50px;
+}
+
+.period {
+	border: solid 1px;
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+
+.t00-06 {
+	border: solid 1px;
+	width: 50px;
+}
+
+.t06-12 {
+	border: solid 1px;
+	width: 50px;
+}
+
+.t12-18 {
+	border: solid 1px;
+	width: 50px;
+}
+
+.t18-24 {
+	border: solid 1px;
+	width: 50px;
+}
+
