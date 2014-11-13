@@ -17,6 +17,7 @@ function writeClock() {
 
     $("#date").html(myDate);
     $("#time").html(myTime);
+    
 };
 
 function rewriteData(data) {
