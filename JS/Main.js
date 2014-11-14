@@ -7,30 +7,26 @@ function timerObj() {
 
 function writeInfo() {
     var Nowymdhms　 = 　new Date();
-    var NowYear = Nowymdhms.getFullYear();
-    var NowMon = Nowymdhms.getMonth() + 1;
-    var NowDay = Nowymdhms.getDate();
     var NowHour = Nowymdhms.getHours();
     var NowMin = Nowymdhms.getMinutes();
     var NowSec = Nowymdhms.getSeconds();
-
-    var myDate = NowYear + "/" + NowMon + "/" + NowDay
-    var myTime = NowHour + ":" + NowMin;
-
-    $("#date").html(myDate);
-    $("#time").html(myTime);
     
-    // 現在のデータが無いor00分00秒の場合はデータ取得
+    $("#date").html(formatDate(new Date(),"YYYY/MM/DD"));
+    $("#time").html(formatDate(new Date(),"hh:mm"));
+    
+    // 現在のデータが無いor05分00秒の場合はデータ取得
     if (dataflg == 0) {
         //取得する
         loadData();
-    } else if (NowMin == 0) {
-        if (NowSec == 0) {
+    } else if (NowMin == 5 && NowSec == 0) {
             //取得する
             loadData();
-        }
     }
     
+    // 00時00分00秒になったらメッセージ更新
+    if (NowHour == 0 && NowMin == 0 && NowSec == 0) {
+        setTrashMsg();
+    };
 };
 
 
@@ -48,9 +44,7 @@ drk7jpweather.callback = function(arg) {
         area = {};
     
     dataflg = 1;
-
     
-//    str += arg.pref.id + "\r\n"; // 県名
     var pubymdhms = new Date(arg.pubDate);
     
     var Nowymdhms = new Date();
@@ -61,21 +55,41 @@ drk7jpweather.callback = function(arg) {
         if (area == "東京地方") {
             for (info in arg.pref.area[area].info) {
                 if (arg.pref.area[area].info[info].date == formatDate(new Date(),"YYYY/MM/DD")) {
-//                    alert("今日：" + arg.pref.area[area].info[info].date);   
-                }
+                    
+                    setData(arg.pref.area[area].info[info],"today");
+                };
                 if (arg.pref.area[area].info[info].date == formatDate(addDate(new Date(),1,"DD"),"YYYY/MM/DD")) {
-//                    alert("明日：" + arg.pref.area[area].info[info].date);   
-                }
-            }
-        }
-        
-//        str += area + " ";
-//        str += arg.pref.area[area].info[0].date + " の ";
-//        str += "最高気温 " + arg.pref.area[area].info[0].temperature.range[0].content + " 度 ";
-//        str += "最低気温 " + arg.pref.area[area].info[0].temperature.range[1].content + " 度\r\n";
+                    
+                    setData(arg.pref.area[area].info[info],"tomorrow");
+                };
+            };
+        };
     };    
     
 };
+
+// 渡すargの中身はinfo以下
+var setData = function(arg,sec) {
+    // 日付
+//    console.log("called");
+    $("#" + sec + " > .outline > .title").html(new Date(arg.date).getDate() + "日の天気");
+    $("#" + sec + " > .outline > .weather").html(arg.weather);
+    
+    $("#" + sec + " > .cent > .max").html(arg.temperature.range[0].content + "℃");
+    $("#" + sec + " > .cent > .min").html(arg.temperature.range[1].content + "℃");
+
+    $("#" + sec + " > .period > .t00-06").html(arg.rainfallchance.period[0].content + "％");
+    $("#" + sec + " > .period > .t06-12").html(arg.rainfallchance.period[1].content + "％");
+    $("#" + sec + " > .period > .t12-18").html(arg.rainfallchance.period[2].content + "％");
+    $("#" + sec + " > .period > .t18-24").html(arg.rainfallchance.period[3].content + "％");
+
+};
+
+var setTrashMsg = function() {
+    $("todayMsg1").html("");
+    $("todayMsg2").html("");
+};
+
 
 /**
  * 日付をフォーマットする
@@ -182,6 +196,3 @@ var dateDiff = function (date1, date2, interval) {
 };
 
 
-//  TODO
-//  当日判定
-//  jsonデータのセット
