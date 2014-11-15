@@ -29,8 +29,10 @@ p {
 
 dt {
 
+    height: auto;
 
     margin: 0;
+/*    margin: 20px,10px;,20px,10px;*/
 
 
 }
@@ -42,6 +44,11 @@ dd {
     margin: 0;
 
 
+}
+
+body {
+    background-image: url(../Resource/back.png);
+    color: white;
 }
 
 
@@ -72,7 +79,7 @@ dd {
 #date {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     /*background-color: red;*/
@@ -96,7 +103,7 @@ dd {
 #time {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     /*background-color: red;*/
@@ -125,30 +132,22 @@ dd {
 
     /*	background-color: yellow;*/
 
+    height: 300px;
 
     width: 420px;
 
 
     float: left;
 
+/*    border: solid 1px;*/
 
 }
-
-
-/*
-#todayIcon {
-    border: solid 1px;
-    width: 400px;
-    height: 240px;
-    float: left;
-}
-*/
 
 
 .msg {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     height: 48px;
@@ -166,7 +165,7 @@ dd {
 .title {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     width: 200px;
@@ -175,10 +174,10 @@ dd {
     float: left;
 
 
-    font-size: 24px;
+    font-size: 32px;
 
 
-    height: 24px;
+    height: 32px;
 
 
 }
@@ -187,7 +186,7 @@ dd {
 .weather {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     width: 200px;
@@ -196,10 +195,10 @@ dd {
     float: left;
 
 
-    font-size: 24px;
+    font-size: 32px;
 
 
-    height: 24px;
+    height: 32px;
 
 
 }
@@ -208,11 +207,12 @@ dd {
 .subtitle {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     width: 100px;
 
+    font-size: 24px;
 
 }
 
@@ -220,13 +220,13 @@ dd {
 .cent {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     width: 200px;
 
 
-    height: 100px;
+    height: 140px;
 
 
     float: left;
@@ -238,23 +238,29 @@ dd {
 .max {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
-    width: 50px;
+    width: 200px;
 
+    font-size: 32px;
 
+    color: red;
+    
 }
 
 
 .min {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
-    width: 50px;
+    width: 200px;
+    
+    font-size: 32px;
 
+    color: skyblue;
 
 }
 
@@ -262,13 +268,13 @@ dd {
 .period {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
     width: 200px;
 
 
-    height: 100px;
+    height: 140px;
 
 
     float: left;
@@ -280,46 +286,81 @@ dd {
 .t00-06 {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
-    width: 50px;
+    width: 200px;
 
-
+    font-size: 28px;
+    
+    color: LemonChiffon;
 }
 
 
 .t06-12 {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
+    width: 200px;
 
-    width: 50px;
+    font-size: 28px;
 
-
+    color: yellow;
 }
 
 
 .t12-18 {
 
+/*    border: solid 1px;*/
 
-    border: solid 1px;
+    width: 200px;
 
+    font-size: 28px;
 
-    width: 50px;
-
-
+    color: Orange;
 }
 
 
 .t18-24 {
 
 
-    border: solid 1px;
+/*    border: solid 1px;*/
 
 
-    width: 50px;
+    width: 200px;
+
+    font-size: 28px;
+
+    color: Chocolate;
+}
+#systemMsg {
+    height: auto;
+}
 
 
+
+#todayMsg1 {
+    font-size: 28px;
+}
+
+#tomorrowMsg1 {
+    font-size: 28px;
+}
+
+.fire {
+    color: red;
+}
+
+.nofire {
+    color: lightblue;
+}
+
+.recycle {
+    color: yellow;
+}
+
+
+#tomorrow {
+/*    border: solid 1px;*/
 }
