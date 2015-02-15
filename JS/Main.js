@@ -35,6 +35,8 @@ function writeInfo() {
 function loadData() {
 
     var url = "http://www.drk7.jp/weather/json/13.js?callback=?";
+    // テスト用
+//    var url = "./JS/sample.js?callback=?";
     $.getJSON(url);
 
 };
@@ -50,17 +52,23 @@ drk7jpweather.callback = function(arg) {
     var pubymdhms = new Date(arg.pubDate);
 
     var Nowymdhms = new Date();
+    
+    var todayDate = formatDate(new Date(), "YYYY/MM/DD");
+    var tommorowDate = formatDate(addDate(new Date(), 1, "DD"), "YYYY/MM/DD");
+    // テスト用
+//    var todayDate = "2014/11/09";
+//    var tommorowDate = "2014/11/10";
 
     $("#systemMsg").html("発信 " + formatDate(pubymdhms, "MM/DD hh:mm") + " 取得 " + formatDate(Nowymdhms, "MM/DD hh:mm:ss"));
 
     for (area in arg.pref.area) {
         if (area == "東京地方") {
             for (info in arg.pref.area[area].info) {
-                if (arg.pref.area[area].info[info].date == formatDate(new Date(), "YYYY/MM/DD")) {
+                if (arg.pref.area[area].info[info].date == todayDate) {
 
                     setData(arg.pref.area[area].info[info], "today");
                 };
-                if (arg.pref.area[area].info[info].date == formatDate(addDate(new Date(), 1, "DD"), "YYYY/MM/DD")) {
+                if (arg.pref.area[area].info[info].date == tommorowDate) {
 
                     setData(arg.pref.area[area].info[info], "tomorrow");
                 };
@@ -73,17 +81,17 @@ drk7jpweather.callback = function(arg) {
 // 渡すargの中身はinfo以下
 var setData = function(arg, sec) {
     // 日付
-    //    console.log("called");
-    $("#" + sec + " > .outline > .title").html(new Date(arg.date).getDate() + "日の天気");
-    $("#" + sec + " > .outline > .weather").html(arg.weather);
+//        console.log(arg.weather);
 
-    $("#" + sec + " > .cent > .max").html("最高 " + arg.temperature.range[0].content + "℃");
-    $("#" + sec + " > .cent > .min").html("最低 " + arg.temperature.range[1].content + "℃");
+    $("#" + sec + "_weather").html(arg.weather);
 
-    $("#" + sec + " > .period > .t00-06").html("00～06 " + arg.rainfallchance.period[0].content + "％");
-    $("#" + sec + " > .period > .t06-12").html("06～12 " + arg.rainfallchance.period[1].content + "％");
-    $("#" + sec + " > .period > .t12-18").html("12～18 " + arg.rainfallchance.period[2].content + "％");
-    $("#" + sec + " > .period > .t18-24").html("18～24 " + arg.rainfallchance.period[3].content + "％");
+    $("#" + sec + "_cent_max").html(arg.temperature.range[0].content + "℃");
+    $("#" + sec + "_cent_min").html(arg.temperature.range[1].content + "℃");
+
+    $("#" + sec + "_per_1").html(arg.rainfallchance.period[0].content + "％");
+    $("#" + sec + "_per_2").html(arg.rainfallchance.period[1].content + "％");
+    $("#" + sec + "_per_3").html(arg.rainfallchance.period[2].content + "％");
+    $("#" + sec + "_per_4").html(arg.rainfallchance.period[3].content + "％");
 
 };
 

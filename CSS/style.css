@@ -1,141 +1,36 @@
 
-
-h1 {
-
-
-    margin: 0;
-
-
-}
-
-
-dl {
-
-
-    margin: 0;
-
-
-}
-
-
-p {
-
-
-    margin: 0;
-
-
-}
-
-
-dt {
-
-    height: auto;
-
-    margin: 0;
-/*    margin: 20px,10px;,20px,10px;*/
-
-
-}
-
-
-dd {
-
-
-    margin: 0;
-
-
-}
+/* 全体 */
 
 body {
-    background-image: url(../Resource/back.png);
-    color: white;
-}
 
+    background-image: url(../Resource/back.png);
+
+    color: white;
+
+}
 
 #MainRain {
 
-
     width: 785px;
-
 
     height: 550px;
 
-
     seamless;
-
 
     scrolling: no;
 
-
-    /*border: solid 1px;*/
-
-
     float: left;
-
-
-}
-
-
-#date {
-
-
-/*    border: solid 1px;*/
-
-
-    /*background-color: red;*/
-
-
-    width: 250px;
-
-
-    height: 48px;
-
-
-    float: left;
-
-
-    font-size: 48px;
-
-
-}
-
-
-#time {
-
-
-/*    border: solid 1px;*/
-
-
-    /*background-color: red;*/
-
-
-    width: 130px;
-
-
-    /*height: 50px;*/
-
-
-    font-size: 48px;
-
-
-    float: left;
-
-
-    margin-left: 20px;
-
 
 }
 
 
 #today {
 
-
     /*	background-color: yellow;*/
 
-    height: 300px;
+    height: 260px;
 
-    width: 420px;
-
+    width: 530px;
 
     float: left;
 
@@ -144,223 +39,200 @@ body {
 }
 
 
-.msg {
+#tomorrow {
 
+    height: 260px;
 
-/*    border: solid 1px;*/
-
-
-    height: 48px;
-
-
-    width: 400px;
-
+    width: 530px;
 
     float: left;
-
+    
+/*    border: solid 1px;*/
 
 }
 
-
-.title {
-
-
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-
-    float: left;
-
-
-    font-size: 32px;
-
-
-    height: 32px;
-
-
+.info {
+    
+    width: 530px;
+    
+    height: 260px;
+    
 }
 
 
+/* 天気情報 */
 .weather {
 
+/*        border: solid 1px;*/
 
-/*    border: solid 1px;*/
+    width: auto;
 
+/*    float: left;*/
 
-    width: 200px;
+    font-size: 52px;
 
+    height: 52px;
 
-    float: left;
-
-
-    font-size: 32px;
-
-
-    height: 32px;
-
-
-}
-
-
-.subtitle {
-
-
-/*    border: solid 1px;*/
-
-
-    width: 100px;
-
-    font-size: 24px;
+    padding-left: 15px;
 
 }
 
 
 .cent {
 
-
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-
-    height: 140px;
-
-
-    float: left;
-
+/*        border: solid 1px;*/
 
 }
 
+.centdata {
+
+    font-size: 60px;
+    
+/*    border: solid 1px;*/
+    
+    text-align: center;
+
+}
 
 .max {
 
+/*    color: red;*/
 
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-    font-size: 32px;
-
-    color: red;
-    
+    background-color: red;
 }
-
 
 .min {
 
-
-/*    border: solid 1px;*/
-
-
-    width: 200px;
+/*    color: skyblue;*/
     
-    font-size: 32px;
-
-    color: skyblue;
+    background-color: skyblue;
+    
+    color: black;
 
 }
-
 
 .period {
 
-
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-
-    height: 140px;
-
-
-    float: left;
-
+/*        border: solid 1px;*/
 
 }
 
+.perioddata {
+
+/*    border: solid 1px;*/
+
+    font-size: 48px;
+    
+    padding-right: 15px;
+
+    color: black;
+    
+    text-align: center;
+}
 
 .t00-06 {
 
+/*    color: LemonChiffon;*/
 
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-    font-size: 28px;
+    background-color: LemonChiffon;
     
-    color: LemonChiffon;
 }
-
 
 .t06-12 {
 
+    background-color: yellow;
 
-/*    border: solid 1px;*/
-
-    width: 200px;
-
-    font-size: 28px;
-
-    color: yellow;
 }
-
 
 .t12-18 {
 
-/*    border: solid 1px;*/
+    background-color: Orange;
 
-    width: 200px;
-
-    font-size: 28px;
-
-    color: Orange;
 }
-
 
 .t18-24 {
 
+    background-color: Chocolate;
 
-/*    border: solid 1px;*/
-
-
-    width: 200px;
-
-    font-size: 28px;
-
-    color: Chocolate;
 }
-#systemMsg {
+
+
+
+/* メッセージ系 */
+.msg {
+
+/*        border: solid 1px;*/
+
     height: auto;
+
 }
 
 
+#systemMsg {
+
+    height: 20px;
+    
+    float: left;
+    
+    width: 530px;
+    
+/*    border: solid 1px;*/
+    
+}
 
 #todayMsg1 {
-    font-size: 28px;
+
+    font-size: 32px;
+    
 }
 
 #tomorrowMsg1 {
-    font-size: 28px;
+
+    font-size: 32px;
+
 }
 
 .fire {
+
     color: red;
+
 }
 
 .nofire {
+
     color: lightblue;
+
 }
 
 .recycle {
+
     color: yellow;
+
 }
 
 
-#tomorrow {
-/*    border: solid 1px;*/
+/* 時刻表示 */
+
+
+#dsptime {
+    
+    font-size: 150px;
+    
 }
+
+
+#date {
+
+/*        border: solid 1px;*/
+
+    float: left;
+}
+
+#time {
+
+/*        border: solid 1px;*/
+
+    padding-left: 50px;
+
+}
+
