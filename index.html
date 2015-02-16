@@ -14,7 +14,7 @@
 
 <body>
 
-    <iframe id="MainRain" src="http://tokyo-ame.jwa.or.jp/index.html"></iframe> 
+    <iframe id="MainRain" src="http://tokyo-ame.jwa.or.jp/index.html" scrolling="no"></iframe> 
 <!--    <iframe id="MainRain" src="http://placehold.jp/785x550.png"></iframe>-->
 
     <section id="today">
@@ -24,18 +24,30 @@
                 <td colspan="4" class='weather' id="today_weather"></td>
             </tr>
             <tr  class='cent'>
-                <td colspan="2" class='max centdata' id="today_cent_max"></td>
-                <td colspan="2" class='min centdata' id="today_cent_min"></td>
+                <td class='max centdata' id="today_cent_max"></td>
+                
+                <td class='t00-06 perioddata' id="today_per_1"></td>
+                
             </tr>
             <tr class='period'>
-                <td class='t00-06 perioddata' id="today_per_1"></td>
+                <td class='min centdata' id="today_cent_min"></td>
+                
                 <td class='t06-12 perioddata' id="today_per_2"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" id="todayMsg1" class="msg"></td>
+           
                 <td class='t12-18 perioddata' id="today_per_3"></td>
+            </tr>
+            <tr>
+
                 <td class='t18-24 perioddata' id="today_per_4"></td>
             </tr>
+<!--
             <tr>
                 <td colspan="4" id="todayMsg1" class="msg"></td>
             </tr>
+-->
         </table>  
    
     </section>
@@ -47,18 +59,29 @@
                 <td colspan="4" class='weather' id="tomorrow_weather"></td>
             </tr>
             <tr class='cent'>
-                <td colspan="2" class='max centdata' id="tomorrow_cent_max"></td>
-                <td colspan="2" class='min centdata' id="tomorrow_cent_min"></td>
+                <td class='max centdata' id="tomorrow_cent_max"></td>
+                
+                <td class='t00-06 perioddata' id="tomorrow_per_1"></td>
             </tr>
             <tr class='period'>
-                <td class='t00-06 perioddata' id="tomorrow_per_1"></td>
+                <td class='min centdata' id="tomorrow_cent_min"></td>
+                
                 <td class='t06-12 perioddata' id="tomorrow_per_2"></td>
+            </tr>
+            <tr>
+                <td rowspan="2" id="tomorrowMsg1" class="msg"></td>
+                
                 <td class='t12-18 perioddata' id="tomorrow_per_3"></td>
+            </tr>
+            <tr>
+
                 <td class='t18-24 perioddata' id="tomorrow_per_4"></td>
             </tr>
+<!--
             <tr>
                 <td colspan="4" id="tomorrowMsg1" class="msg"></td>
             </tr>
+-->
         </table>
     </section>
 

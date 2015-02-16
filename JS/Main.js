@@ -85,13 +85,13 @@ var setData = function(arg, sec) {
 
     $("#" + sec + "_weather").html(arg.weather);
 
-    $("#" + sec + "_cent_max").html(arg.temperature.range[0].content + "℃");
-    $("#" + sec + "_cent_min").html(arg.temperature.range[1].content + "℃");
+    $("#" + sec + "_cent_max").html("最高 " + arg.temperature.range[0].content + "℃");
+    $("#" + sec + "_cent_min").html("最低 " + arg.temperature.range[1].content + "℃");
 
-    $("#" + sec + "_per_1").html(arg.rainfallchance.period[0].content + "％");
-    $("#" + sec + "_per_2").html(arg.rainfallchance.period[1].content + "％");
-    $("#" + sec + "_per_3").html(arg.rainfallchance.period[2].content + "％");
-    $("#" + sec + "_per_4").html(arg.rainfallchance.period[3].content + "％");
+    $("#" + sec + "_per_1").html("～06 " + arg.rainfallchance.period[0].content + "％");
+    $("#" + sec + "_per_2").html("～12 " + arg.rainfallchance.period[1].content + "％");
+    $("#" + sec + "_per_3").html("～18 " + arg.rainfallchance.period[2].content + "％");
+    $("#" + sec + "_per_4").html("～24 " + arg.rainfallchance.period[3].content + "％");
 
 };
 
@@ -99,28 +99,28 @@ var setTrashMsg = function() {
     
     var todayTrash = clcTrashDay(formatDate(new Date(), "YYYY/MM/DD"));    
     if (todayTrash == "f") {
-        $("#todayMsg1").addClass("fire").html("燃えるゴミの日")
+        $("#todayMsg1").addClass("fire").html("可燃")
     } else if (todayTrash == "n") {
-        $("#todayMsg1").addClass("nofire").html("燃えないゴミの日");
+        $("#todayMsg1").addClass("nofire").html("不燃");
     } else if (todayTrash == "s") {
-        $("#todayMsg1").addClass("recycle").html("資源ごみの日");
+        $("#todayMsg1").addClass("recycle").html("資源");
     } else {
         // 特になし
-        $("#todayMsg1").html("特になし");
+        $("#todayMsg1").html("なし");
     }
     
     
     var tomorrowTrash = clcTrashDay(formatDate(addDate(new Date(), 1, "DD"), "YYYY/MM/DD"))    
     msg = "";
     if (tomorrowTrash == "f") {
-        $("#tomorrowMsg1").addClass("fire").html("燃えるゴミの日");
+        $("#tomorrowMsg1").addClass("fire").html("可燃");
     } else if (tomorrowTrash == "n") {
-        $("#tomorrowMsg1").addClass("nofire").html("燃えないゴミの日");
+        $("#tomorrowMsg1").addClass("nofire").html("不燃");
     } else if (tomorrowTrash == "s") {
-        $("#tomorrowMsg1").addClass("recycle").html("資源ごみの日");
+        $("#tomorrowMsg1").addClass("recycle").html("資源");
     } else {
         // 特になし
-        $("#tomorrowMsg1").html("特になし");
+        $("#tomorrowMsg1").html("なし");
     }
     
 
