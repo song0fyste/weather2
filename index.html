@@ -13,88 +13,103 @@
 </head>
 
 <body>
+    
+    <table>
+        <tr>
+            <td rowspan="2">
+                <iframe id="MainRain" src="http://tokyo-ame.jwa.or.jp/index.html" scrolling="no"></iframe> 
+            <!--    <iframe id="MainRain" src="http://placehold.jp/785x550.png"></iframe>-->
+            </td>
+            <td>
+                <section id="today">
 
-    <iframe id="MainRain" src="http://tokyo-ame.jwa.or.jp/index.html" scrolling="no"></iframe> 
-<!--    <iframe id="MainRain" src="http://placehold.jp/785x550.png"></iframe>-->
+                    <table class="info">
+                        <tr class="outline">
+                            <td colspan="4" class='weather' id="today_weather"></td>
+                        </tr>
+                        <tr  class='cent'>
+                            <td class='max centdata' id="today_cent_max"></td>
 
-    <section id="today">
+                            <td class='t00-06 perioddata' id="today_per_1"></td>
 
-        <table class="info">
-            <tr class="outline">
-                <td colspan="4" class='weather' id="today_weather"></td>
-            </tr>
-            <tr  class='cent'>
-                <td class='max centdata' id="today_cent_max"></td>
-                
-                <td class='t00-06 perioddata' id="today_per_1"></td>
-                
-            </tr>
-            <tr class='period'>
-                <td class='min centdata' id="today_cent_min"></td>
-                
-                <td class='t06-12 perioddata' id="today_per_2"></td>
-            </tr>
-            <tr>
-                <td rowspan="2" id="todayMsg1" class="msg"></td>
-           
-                <td class='t12-18 perioddata' id="today_per_3"></td>
-            </tr>
-            <tr>
+                        </tr>
+                        <tr class='period'>
+                            <td class='min centdata' id="today_cent_min"></td>
 
-                <td class='t18-24 perioddata' id="today_per_4"></td>
-            </tr>
-<!--
-            <tr>
-                <td colspan="4" id="todayMsg1" class="msg"></td>
-            </tr>
--->
-        </table>  
-   
-    </section>
+                            <td class='t06-12 perioddata' id="today_per_2"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" id="todayMsg1" class="msg"></td>
 
-    <section id="tomorrow">
+                            <td class='t12-18 perioddata' id="today_per_3"></td>
+                        </tr>
+                        <tr>
 
-        <table class="info">
-            <tr class="outline">
-                <td colspan="4" class='weather' id="tomorrow_weather"></td>
-            </tr>
-            <tr class='cent'>
-                <td class='max centdata' id="tomorrow_cent_max"></td>
-                
-                <td class='t00-06 perioddata' id="tomorrow_per_1"></td>
-            </tr>
-            <tr class='period'>
-                <td class='min centdata' id="tomorrow_cent_min"></td>
-                
-                <td class='t06-12 perioddata' id="tomorrow_per_2"></td>
-            </tr>
-            <tr>
-                <td rowspan="2" id="tomorrowMsg1" class="msg"></td>
-                
-                <td class='t12-18 perioddata' id="tomorrow_per_3"></td>
-            </tr>
-            <tr>
+                            <td class='t18-24 perioddata' id="today_per_4"></td>
+                        </tr>
+            <!--
+                        <tr>
+                            <td colspan="4" id="todayMsg1" class="msg"></td>
+                        </tr>
+            -->
+                    </table>  
 
-                <td class='t18-24 perioddata' id="tomorrow_per_4"></td>
-            </tr>
-<!--
-            <tr>
-                <td colspan="4" id="tomorrowMsg1" class="msg"></td>
-            </tr>
--->
-        </table>
-    </section>
+                </section>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <section id="tomorrow">
 
-    <div id="systemMsg" class="msg"></div>
+                    <table class="info">
+                        <tr class="outline">
+                            <td colspan="4" class='weather' id="tomorrow_weather"></td>
+                        </tr>
+                        <tr class='cent'>
+                            <td class='max centdata' id="tomorrow_cent_max"></td>
 
-    <section id="dsptime">
-        <table id="dspdatetime">
-            <tr>
-                <td id="date"></td>
-                <td id="time"></td>
-            </tr>
-        </table>
-    </section>
+                            <td class='t00-06 perioddata' id="tomorrow_per_1"></td>
+                        </tr>
+                        <tr class='period'>
+                            <td class='min centdata' id="tomorrow_cent_min"></td>
+
+                            <td class='t06-12 perioddata' id="tomorrow_per_2"></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" id="tomorrowMsg1" class="msg"></td>
+
+                            <td class='t12-18 perioddata' id="tomorrow_per_3"></td>
+                        </tr>
+                        <tr>
+
+                            <td class='t18-24 perioddata' id="tomorrow_per_4"></td>
+                        </tr>
+            <!--
+                        <tr>
+                            <td colspan="4" id="tomorrowMsg1" class="msg"></td>
+                        </tr>
+            -->
+                    </table>
+                </section>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="systemMsg" class="msg"></div>
+            </td>
+        <tr>
+            <td colspan="2">
+                <section id="dsptime">
+                    <table id="dspdatetime">
+                        <tr>
+                            <td id="date"></td>
+                            <td id="time"></td>
+                        </tr>
+                    </table>
+                </section>
+            </td>
+        </tr>
+    </table>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="JS/Main.js"></script>
